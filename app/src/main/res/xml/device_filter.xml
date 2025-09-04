@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Arduino Uno -->
+    <usb-device vendor-id="9025" product-id="67" />
+    <!-- Arduino Uno R3 -->
+    <usb-device vendor-id="2341" product-id="43" />
+    <!-- Arduino Uno R3 (SMD) -->
+    <usb-device vendor-id="2341" product-id="1" />
+    <!-- Generic FTDI -->
+    <usb-device vendor-id="1027" product-id="24577" />
+    <!-- CH340 Serial -->
+    <usb-device vendor-id="6790" product-id="29987" />
+</resources>

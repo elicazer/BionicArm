@@ -1,0 +1,74 @@
+PCA9685 Bionic Arm Wiring Diagram
+==================================
+
+                    ┌─────────────────┐
+                    │   Arduino Uno   │
+                    │                 │
+                    │  5V ────────────┼──┐
+                    │  GND ───────────┼──┼──┐
+                    │  A4 (SDA) ──────┼──┼──┼──┐
+                    │  A5 (SCL) ──────┼──┼──┼──┼──┐
+                    │                 │  │  │  │  │
+                    └─────────────────┘  │  │  │  │
+                                         │  │  │  │
+                    ┌─────────────────────┼──┼──┼──┼──┐
+                    │      PCA9685        │  │  │  │  │
+                    │                     │  │  │  │  │
+                    │  VCC ───────────────┘  │  │  │  │
+                    │  GND ──────────────────┘  │  │  │
+                    │  SDA ─────────────────────┘  │  │
+                    │  SCL ────────────────────────┘  │
+                    │                                 │
+                    │  V+ ─────────────────────────┐  │
+                    │  GND ────────────────────────┼──┘
+                    │                              │
+                    │  Ch0 ──── Thumb Servo       │
+                    │  Ch1 ──── Index Servo       │
+                    │  Ch2 ──── Middle Servo      │
+                    │  Ch3 ──── Ring Servo        │
+                    │  Ch4 ──── Pinky Servo       │
+                    │                              │
+                    └──────────────────────────────┼───
+                                                   │
+                    ┌──────────────────────────────┘
+                    │  External 5V Power Supply
+                    │  (3-5A recommended)
+                    │
+                    │  +5V ────── PCA9685 V+
+                    │  GND ────── PCA9685 GND & Arduino GND
+                    │
+                    └─────────────────────────
+
+Servo Connections (Each servo):
+===============================
+Red Wire    → PCA9685 V+ (power)
+Brown/Black → PCA9685 GND (ground)
+Orange/Yellow → PCA9685 Channel (signal)
+
+Channel Assignments:
+===================
+Channel 0 → Thumb Servo
+Channel 1 → Index Servo
+Channel 2 → Middle Servo
+Channel 3 → Ring Servo
+Channel 4 → Pinky Servo
+
+Power Requirements:
+==================
+Arduino: USB power from phone (via OTG cable)
+Servos: External 5V 3-5A power supply
+Common Ground: Connect all GND together
+
+I2C Connections:
+===============
+Arduino A4 → PCA9685 SDA
+Arduino A5 → PCA9685 SCL
+Arduino 5V → PCA9685 VCC
+Arduino GND → PCA9685 GND
+
+Safety Notes:
+============
+- Always connect common ground
+- Use adequate power supply for servos
+- Double-check wiring before powering on
+- Test individual servos before full assembly
